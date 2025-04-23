@@ -18,7 +18,7 @@ function getComputerChoice() {
     return value;
 }
 
-console.log(getComputerChoice());
+
 
 
 /**/
@@ -37,7 +37,7 @@ function getHumanChoice() {
     } 
 }
 
-console.log(getHumanChoice());
+
 
 /**/
 /*players score*/
@@ -45,8 +45,7 @@ let humanScore = 0;
 
 let computerScore = 0;
 
-console.log(humanScore);
-console.log(computerScore);
+
 
 /**/
 /*create a function for each round and for scores*/
@@ -66,5 +65,17 @@ function playRound() {
     return {humanScore , computerScore} ;
 }
 
-console.log(playRound());
 
+
+/**/
+/*create a function to play game with desired rounds*/
+function playGame() {
+    let round = 5;
+
+/*add a loop to run through the desired amount of rounds*/
+    for (let index = 0; index < round; index++) {
+         playRound();       
+    }
+}
+
+console.log(playGame());
