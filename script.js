@@ -21,3 +21,20 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 
+/**/
+/*create a function to get the human(user`s) choice*/
+function getHumanChoice() {
+   
+/*get input and convert to a common case ie. lower case*/    
+    input = prompt()
+    value = input.toLowerCase()
+
+/*check if the input value is an incorrect type*/    
+    if (!(value === 'rock' || value === 'paper' || value === 'scissors')) {
+        console.log(alert(`${value} is invalid`) || `${value} is invalid`)        
+    }else{
+        return value;
+    } 
+}
+
+console.log(getHumanChoice())
