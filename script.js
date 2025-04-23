@@ -26,8 +26,8 @@ console.log(getComputerChoice());
 function getHumanChoice() {
    
 /*get input and convert to a common case ie. lower case*/    
-    input = prompt()
-    value = input.toLowerCase()
+    input = prompt().toLowerCase()
+    value = input
 
 /*check if the input value is an incorrect type*/    
     if (!(value === 'rock' || value === 'paper' || value === 'scissors')) {
@@ -37,4 +37,34 @@ function getHumanChoice() {
     } 
 }
 
-console.log(getHumanChoice())
+console.log(getHumanChoice());
+
+/**/
+/*players score*/
+let humanScore = 0;
+
+let computerScore = 0;
+
+console.log(humanScore);
+console.log(computerScore);
+
+/**/
+/*create a function for each round and for scores*/
+function playRound() {
+
+ /*assigning the various input recieved*/   
+    const computerChoice = getComputerChoice()
+    const humanChoice = getHumanChoice()
+
+/*add point to score if won*/    
+    if (humanChoice === computerChoice) {
+        humanScore +=1;
+    } else {
+        computerScore +=1 ;
+    }
+
+    return {humanScore , computerScore} ;
+}
+
+console.log(playRound());
+
