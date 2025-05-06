@@ -4,10 +4,13 @@
 function getComputerChoice() {
     
 /*generate a 3 random numbers and assign to value*/    
-   
-    value =  Math.floor(Math.random()*3)+1;
+    const values =  ['rock', 'paper', 'scissors'];
+    const randomIndex =  Math.floor(Math.random()*values.length);
+    const value = values[randomIndex];
+    console.log(value);
+    return value;
 
-/*assigning a value to each number*/
+/*
     if (value === 1) {
         console.log(`rock`);
         return `rock`;
@@ -17,7 +20,7 @@ function getComputerChoice() {
     } else {
         console.log(`scissors`);
         return `scissors`;
-    }
+    }*/
 
 }
 
@@ -67,15 +70,60 @@ function playRound() {
     console.log(`Human : ${humanScore} | Computer : ${computerScore}`);
 }
 
+let content = document.querySelector('.content');
+content.style.padding = '50px'
 
-function playGame() {
-    humanScore = 0;
-    computerScore = 0;
 
-    for (let round = 0; round <= 5; round++) {
+let rockBtn = document.createElement('button');
+rockBtn.classList.add('rock')
+rockBtn.textContent = 'Rock ⛰';
+rockBtn.style.padding = '30px';
+rockBtn.style.margin = '15px';
+
+content.appendChild(rockBtn);
+
+let paperBtn = document.createElement('button');
+paperBtn.classList.add('paper')
+paperBtn.textContent ='Paper 📃';
+paperBtn.style.padding = '30px';
+paperBtn.style.margin = '15px';
+
+content.appendChild(paperBtn);
+
+let scissorsBtn = document.createElement('button');
+scissorsBtn.classList.add('scissors')
+scissorsBtn.textContent = 'Scissors ✂';
+scissorsBtn.style.padding = '30px';
+scissorsBtn.style.margin = '15px';
+
+content.appendChild(scissorsBtn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function playGame() {
+   
+
+    for (let round = 1; round <= 5; round++) {
         playRound();
         
     }
 }
 
-console.log(playGame());
+console.log(playGame());*/
